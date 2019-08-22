@@ -74,7 +74,7 @@
 
 </head>
 
-<body>
+<body onload="javascript:sayHi();">
   <section class="intro">
     <h1>fehlkauf.biz</h1>
     <a href="mailto:kaufen@fehlkauf.biz">kaufen@fehlkauf.biz</a>
@@ -101,7 +101,7 @@
     <blockquote>
         Work hard - party hard
     </blockquote>
-
+    <button style="display: none;" class="open-zammad-chat">Chat with us</button>
   </section>
 
 <!-- Matomo -->
@@ -120,6 +120,21 @@
 </script>
 <noscript><p><img src="//stats.nanl.de/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p></noscript>
 <!-- End Matomo Code -->
+
+<!-- Chat -->
+<script src="https://fehlkauf-biz.zammad.com/assets/chat/chat-no-jquery.js"></script>
+<script>
+function sayHi() {
+  new ZammadChat({
+    title: 'Was fehlt dir?',
+    background: 'rgb(0,0,0)',
+    fontSize: '12px',
+    flat: true,
+    chatId: 1
+  });
+};
+</script>
+<!-- End Chat Code -->
 
 </body>
 
