@@ -11,7 +11,6 @@
     @import url('https://fonts.googleapis.com/css?family=Vollkorn:400,700&display=swap');
 
     body {
-      padding-top: 38vh;
       padding-left: 38vw;
       background-color #FFF; // Mirko, hier kannst die Background-Farbe der gesamten Seite ändern
       color: #000;
@@ -20,9 +19,16 @@
     body * {
       margin:0;
       line-height: 1;
+      box-sizing: border-box;
     }
     h1 {
       animation: 1s ease-out 0s 1 thisIsWar;
+    }
+
+    .intro {
+      height: 100vh;
+      padding-top: 38%;
+      box-sizing: border-box;
     }
 
     @keyframes thisIsWar {
@@ -60,13 +66,43 @@
         transform: translate3d(0, 0, 0);
       }
     }
+
+    blockquote {
+      height: 100vh;
+    }
   </style>
 
 </head>
 
 <body>
-  <h1>fehlkauf.biz</h1>
-  <a href="mailto:kaufen@fehlkauf.biz">kaufen@fehlkauf.biz</a>
+  <section class="intro">
+    <h1>fehlkauf.biz</h1>
+    <a href="mailto:kaufen@fehlkauf.biz">kaufen@fehlkauf.biz</a>
+  </section>
+  <section>
+    <blockquote>
+        Wir machen Business
+    </blockquote>
+    <blockquote>
+        Einmal Fehlkauf immer Fehlkauf
+    </blockquote>
+    <blockquote>
+        Wir sind Profis
+    </blockquote>
+    <blockquote>
+        Keine Unsicherheiten mehr beim Einkauf
+    </blockquote>
+    <blockquote>
+        Du bist nicht allein
+    </blockquote>
+    <blockquote>
+        Jeder Kauf ein Fehlkauf
+    </blockquote>
+    <blockquote>
+        Work hard - party hard
+    </blockquote>
+
+  </section>
 
 <!-- Matomo -->
 <script type="text/javascript">
