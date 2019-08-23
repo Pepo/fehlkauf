@@ -6,29 +6,33 @@
   <title>fehlkauf.biz - Wir machen Business</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <style>
 
     @import url('https://fonts.googleapis.com/css?family=Vollkorn:400,700&display=swap');
 
     body {
-      padding-left: 38vw;
-      background-color #FFF; // Mirko, hier kannst die Background-Farbe der gesamten Seite ändern
+      background-color: #FFF; /* Mirko, hier kannst die Background-Farbe der gesamten Seite ändern */
       color: #000;
       font-family: Vollkorn, sans-serif;
+      padding: 0;
+      margin: 0;
+      border: none;
     }
     body * {
       margin:0;
       line-height: 1;
       box-sizing: border-box;
     }
-    h1 {
+    .intro__headline {
       animation: 1s ease-out 0s 1 thisIsWar;
     }
 
     .intro {
       height: 100vh;
-      padding-top: 38%;
+      padding-top: 20vw;
       box-sizing: border-box;
+      padding-left: 38vw;
     }
 
     @keyframes thisIsWar {
@@ -40,7 +44,7 @@
       }
     }
 
-    a{
+    .intro__link{
       color: #000;
       text-decoration: none;
       animation: 1s ease-out 0s 1 thisIsWarReverse;
@@ -67,40 +71,106 @@
       }
     }
 
-    blockquote {
-      height: 100vh;
+
+    .my-slider__slider-item {
+
+      background-size: cover;
+      height: 100%;
+      position: relative;
+      background-position: center center;
     }
+    .my-slider__slider-item--wir-machen-business {
+      background-image: url(images/wir_machen_business.jpg);
+    }
+    .my-slider__slider-item--einmal-fehlkauf {
+      background-image: url(images/einmal_fehlauf_immer_fehlkauf.jpg);
+    }
+    .my-slider__slider-item--wir-sind-profis {
+      background-image: url(images/wir_sind_profis.jpg);
+    }
+    .my-slider__slider-item--keine-unsicherheiten {
+      background-image: url(images/keine_unsicherheiten.jpg);
+    }
+    .my-slider__slider-item--nie-mehr-allein {
+      background-image: url(images/nie_mehr_allein.jpg);
+    }
+    .my-slider__slider-item--jeder-kauf-ein-fehlkauf {
+      background-image: url(images/jeder_kauf_ein_fehlkauf.jpg);
+    }
+    .my-slider__slider-item--party-hard {
+      background-image: url(images/pardy_hard.jpg);
+    }
+
+
+    .my-slider__blockquote {
+      position: absolute;
+      bottom: 0;
+      background-color: rgba(255,255,255,0.8);
+      width: 100%;
+      padding: 1em;
+      font-size: 3vw;
+      font-style: italic;
+      font-weight: normal;
+      text-align: center;
+    }
+
+    .slick-slide{
+      height:100vh !important;
+    }
+
   </style>
 
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 </head>
 
-<body onload="javascript:sayHi();">
+<body>
   <section class="intro">
-    <h1>fehlkauf.biz</h1>
-    <a href="mailto:kaufen@fehlkauf.biz">kaufen@fehlkauf.biz</a>
+    <h1 class="intro__headline">fehlkauf.biz</h1>
+    <a class="intro__link" href="mailto:kaufen@fehlkauf.biz">kaufen@fehlkauf.biz</a>
   </section>
+
+  <div class="my-slider">
+
+      <div class="my-slider__slider-item my-slider__slider-item--party-hard">
+          <blockquote class="my-slider__blockquote">
+            „Work hard - party hard"
+          </blockquote>
+      </div>
+      <div class="my-slider__slider-item my-slider__slider-item--jeder-kauf-ein-fehlkauf">
+          <blockquote class="my-slider__blockquote">
+            „Jeder Kauf ein Fehlkauf"
+          </blockquote>
+      </div>
+
+    <div class="my-slider__slider-item my-slider__slider-item--nie-mehr-allein">
+          <blockquote class="my-slider__blockquote">
+            „Nie mehr allein“
+          </blockquote>
+      </div>
+      <div class="my-slider__slider-item my-slider__slider-item--keine-unsicherheiten">
+          <blockquote class="my-slider__blockquote">
+            „Keine Unsicherheiten mehr beim Einkauf“
+          </blockquote>
+      </div>
+    <div class="my-slider__slider-item my-slider__slider-item--wir-machen-business">
+          <blockquote class="my-slider__blockquote">
+            „Wir machen Business“
+          </blockquote>
+      </div>
+      <div class="my-slider__slider-item my-slider__slider-item--einmal-fehlkauf">
+          <blockquote class="my-slider__blockquote">
+            „Einmal Fehlkauf immer Fehlkauf“
+          </blockquote>
+      </div>
+      <div class="my-slider__slider-item my-slider__slider-item--wir-sind-profis">
+          <blockquote class="my-slider__blockquote">
+            „Wir sind Profis“
+          </blockquote>
+      </div>
+</div>
+
+
   <section>
-    <blockquote>
-        Wir machen Business
-    </blockquote>
-    <blockquote>
-        Einmal Fehlkauf immer Fehlkauf
-    </blockquote>
-    <blockquote>
-        Wir sind Profis
-    </blockquote>
-    <blockquote>
-        Keine Unsicherheiten mehr beim Einkauf
-    </blockquote>
-    <blockquote>
-        Du bist nicht allein
-    </blockquote>
-    <blockquote>
-        Jeder Kauf ein Fehlkauf
-    </blockquote>
-    <blockquote>
-        Work hard - party hard
-    </blockquote>
     <button style="display: none;" class="open-zammad-chat">Chat with us</button>
   </section>
 
@@ -135,6 +205,21 @@ function sayHi() {
 };
 </script>
 <!-- End Chat Code -->
+
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+$(document).ready(function(){
+  $('.my-slider').slick({
+    "autoplay" : true,
+    "autoplaySpeed": 500,
+    "prevArrow": "",
+    "nextArrow": "",
+  });
+});
+</script>
+
 
 </body>
 
