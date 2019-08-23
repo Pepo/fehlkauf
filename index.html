@@ -77,7 +77,7 @@
       background-size: cover;
       height: 100%;
       position: relative;
-      background-position: center center;
+      background-position: center;
     }
     .my-slider__slider-item--wir-machen-business {
       background-image: url(images/wir_machen_business.jpg);
@@ -100,6 +100,31 @@
     .my-slider__slider-item--party-hard {
       background-image: url(images/pardy_hard.jpg);
     }
+    .my-slider__slider-item--wir-kiffen-zu-wenig {
+      background-image: url(images/wir_kiffen_zu_wenig.jpg);
+    }
+    .my-slider__slider-item--100-prozent-sind-nicht-genug {
+      background-image: url(images/100_prozent_sind_nicht_genug.jpg);
+    }
+    .my-slider__slider-item--qualitaet-haette-ihren-preis {
+      background-image: url(images/qualitaet_haette_ihren_preis.jpg);
+    }
+
+    .my-slider__slider-item--bei-uns-deployed-der-chef-noch-selbst {
+      background-image: url(images/bei_uns_deployed_der_chef_noch_selbst.jpg);
+    }
+
+    .my-slider__slider-item--mit-business-kommt-verantwortung {
+      background-image: url(images/mit_business_komt_verantwortung.jpg);
+    }
+
+    .my-slider__slider-item--eemit-business-kommt-verantwortung {
+      background-image: url(images/mit_business_komt_verantwortung.jpg);
+    }
+
+    .my-slider__slider-item--wir-jammern-nicht-wir-handeln {
+      background-image: url(images/wir_jammern_nicht_wir_handeln.jpg);
+    }
 
 
     .my-slider__blockquote {
@@ -108,15 +133,23 @@
       background-color: rgba(255,255,255,0.8);
       width: 100%;
       padding: 1em;
-      font-size: 3vw;
-      font-style: italic;
-      font-weight: normal;
+      font-size: 2rem;
+      font-weight: bold;
       text-align: center;
     }
 
-    .slick-slide{
+    .slick-slide {
       height:100vh !important;
     }
+
+    @media screen and (min-width:800px) {
+
+      .my-slider__blockquote {
+        font-size: 2rem;
+      }
+    }
+
+
 
   </style>
 
@@ -162,11 +195,44 @@
             „Einmal Fehlkauf immer Fehlkauf“
           </blockquote>
       </div>
+      <div class="my-slider__slider-item my-slider__slider-item--wir-kiffen-zu-wenig">
+          <blockquote class="my-slider__blockquote">
+            „Wir kiffen zu wenig“
+          </blockquote>
+      </div>
       <div class="my-slider__slider-item my-slider__slider-item--wir-sind-profis">
           <blockquote class="my-slider__blockquote">
             „Wir sind Profis“
           </blockquote>
       </div>
+      <div class="my-slider__slider-item my-slider__slider-item--100-prozent-sind-nicht-genug">
+          <blockquote class="my-slider__blockquote">
+            „100% sind uns zu wenig“
+          </blockquote>
+      </div>
+      <div class="my-slider__slider-item my-slider__slider-item--qualitaet-haette-ihren-preis">
+          <blockquote class="my-slider__blockquote">
+            „Qualität hätte ihren Preis“
+          </blockquote>
+      </div>
+      <div class="my-slider__slider-item my-slider__slider-item--wir-jammern-nicht-wir-handeln">
+          <blockquote class="my-slider__blockquote">
+            „Wir jammern nicht - wir handeln“
+          </blockquote>
+      </div>
+      <div class="my-slider__slider-item my-slider__slider-item--bei-uns-deployed-der-chef-noch-selbst">
+          <blockquote class="my-slider__blockquote">
+            „Bei uns deployed der Chef noch selbst“
+          </blockquote>
+      </div>
+      <div class="my-slider__slider-item my-slider__slider-item--mit-business-kommt-verantwortung">
+          <blockquote class="my-slider__blockquote">
+            „Mit Business kommt Verantwortung“
+          </blockquote>
+      </div>
+
+
+
 </div>
 
 
@@ -213,7 +279,7 @@ function sayHi() {
 $(document).ready(function(){
   $('.my-slider').slick({
     "autoplay" : true,
-    "autoplaySpeed": 500,
+    "autoplaySpeed": 1000,
     "prevArrow": "",
     "nextArrow": "",
   });
